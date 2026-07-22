@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Event name</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td><a href="{% url 'edit' i.id %}">Edit</a></td>
+                <td><a href="{% url 'delete' i.id %}">delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
